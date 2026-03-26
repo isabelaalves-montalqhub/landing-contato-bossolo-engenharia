@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fale Conosco</title>
+  <title>Regularize seu Imóvel – Bossolo Engenharia</title>
 
-  <!-- ============================================================
-    👉 SUBSTITUA GTM-MPG2WL99 pelo seu ID do Google Tag Manager
-  ============================================================ -->
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -16,262 +13,385 @@
   })(window,document,'script','dataLayer','GTM-MPG2WL99');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- Brevo styles -->
-  <style>
-    @font-face {
-      font-display: block; font-family: Roboto;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-    }
-    @font-face {
-      font-display: fallback; font-family: Roboto; font-weight: 600;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-    }
-    @font-face {
-      font-display: fallback; font-family: Roboto; font-weight: 700;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
-           url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-    }
-    #sib-container input:-ms-input-placeholder { text-align:left; font-family:Helvetica,sans-serif; color:#c0ccda; }
-    #sib-container input::placeholder          { text-align:left; font-family:Helvetica,sans-serif; color:#c0ccda; }
-    #sib-container textarea::placeholder       { text-align:left; font-family:Helvetica,sans-serif; color:#c0ccda; }
-    #sib-container a { text-decoration:underline; color:#2BB2FC; }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
-  <!-- Page styles -->
+  <style>
+    #sib-container input:-ms-input-placeholder { font-family: 'Jost', sans-serif; color: #b0b8c1; }
+    #sib-container input::placeholder          { font-family: 'Jost', sans-serif; color: #b0b8c1; }
+    #sib-container a { color: #c87941; }
+  </style>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #f5f3ee;
-      --accent: #76795b;
-      --text: #1a1a1a;
-      --muted: #6b6b6b;
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
+      --gold: #c87941;
+      --dark: #1c1a17;
+      --text: #3a3128;
+      --muted: #7a6f63;
+      --bg: #faf9f7;
+      --white: #ffffff;
+      --border: #e8e2da;
+      --green: #25d366;
     }
 
     body {
       background: var(--bg);
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Jost', sans-serif;
       color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--dark);
+      padding: 52px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(200,121,65,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(200,121,65,0.15);
+      border: 1px solid rgba(200,121,65,0.4);
+      color: #e8a96a;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      font-weight: 700;
+      color: #f5f0eb;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero-title em { font-style: italic; color: #e8a96a; }
+    .hero-subtitle {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #a09890;
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+    .quick-benefits {
       display: flex;
       justify-content: center;
-      padding: 2rem 1rem;
+      gap: 24px;
+      flex-wrap: wrap;
     }
+    .quick-benefit {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #c8bfb5;
+      font-size: 0.82rem;
+    }
+    .quick-benefit::before { content: '✓'; color: var(--gold); font-weight: 700; }
 
-    .page-wrapper {
+    /* MAIN */
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      max-width: 960px;
-      width: 100%;
-      align-items: center;
+      gap: 48px;
+      align-items: start;
     }
 
-    .headline {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      line-height: 1.1;
+    /* LEFT */
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .info-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
       font-weight: 700;
-      color: var(--text);
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 16px;
     }
-
-    .headline span {
-      color: var(--accent);
-    }
-
-    .subtitle {
-      margin-top: 1.25rem;
-      font-size: 1.05rem;
-      color: var(--muted);
-      line-height: 1.7;
+    .info-text {
+      font-size: 0.95rem;
       font-weight: 300;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .problems { list-style: none; margin-bottom: 32px; }
+    .problems li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .problems li:last-child { border-bottom: none; }
+    .problems li .icon {
+      width: 22px; height: 22px;
+      background: rgba(200,121,65,0.1);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.7rem;
+      color: var(--gold);
+      font-weight: 700;
+      margin-top: 1px;
     }
 
-    .divider {
-      width: 48px;
-      height: 3px;
-      background: var(--accent);
-      margin-top: 2rem;
-      border-radius: 2px;
+    /* WHATSAPP */
+    .whatsapp-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--green);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.2s;
+      margin-bottom: 12px;
+    }
+    .whatsapp-btn:hover { background: #1fb855; transform: translateY(-2px); }
+    .whatsapp-btn svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
+    .whatsapp-note { text-align: center; font-size: 0.75rem; color: var(--muted); font-weight: 300; }
+    .or-divider {
+      display: flex; align-items: center; gap: 12px;
+      margin: 20px 0;
+      color: var(--muted); font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .or-divider::before, .or-divider::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
     }
 
-    /* Override Brevo form container */
-    .sib-form {
-      background: transparent !important;
-      text-align: left !important;
+    /* FORM */
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+    }
+    .form-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .form-card-subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 24px;
+      line-height: 1.5;
     }
 
+    /* Brevo overrides */
+    .sib-form { background: transparent !important; }
+    #sib-form-container { max-width: 100% !important; }
     #sib-container {
-      background: #ffffff !important;
-      border-radius: 12px !important;
-      border: 1px solid #e0ddd6 !important;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.07) !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
       max-width: 100% !important;
-      padding: 2rem !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
     }
-
-    #sib-form-container {
-      max-width: 100% !important;
-    }
-
+    #success-message, #error-message { max-width: 100% !important; margin-bottom: 12px; }
     .sib-form-block__button {
-      width: 100%;
-      padding: 14px 24px !important;
-      font-size: 15px !important;
-      letter-spacing: 0.05em;
+      width: 100% !important;
+      padding: 15px 24px !important;
+      font-size: 14px !important;
+      letter-spacing: 0.08em !important;
+      font-family: 'Jost', sans-serif !important;
       cursor: pointer;
       transition: opacity 0.2s;
     }
     .sib-form-block__button:hover { opacity: 0.85; }
 
-    /* Success message override */
-    #success-message { max-width: 100% !important; }
-    #error-message   { max-width: 100% !important; }
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
 
-    @media (max-width: 680px) {
-      .page-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
+    /* MOBILE */
+    @media (max-width: 700px) {
+      .main { grid-template-columns: 1fr; gap: 32px; padding: 32px 20px; }
+      .form-card { padding: 24px 20px; }
+      .hero { padding: 40px 20px 36px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPG2WL99"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPG2WL99"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <div class="page-wrapper">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Bossolo Engenharia</div>
+  <h1 class="hero-title">Seu imóvel irregular<br>pode ser <em>resolvido</em></h1>
+  <p class="hero-subtitle">Regularizamos casas, construções e terrenos em São José do Rio Preto e região. Atendimento rápido e sem burocracia.</p>
+  <div class="quick-benefits">
+    <span class="quick-benefit">Averbação de construção</span>
+    <span class="quick-benefit">Regularização na prefeitura</span>
+    <span class="quick-benefit">Habite-se</span>
+    <span class="quick-benefit">Documentação completa</span>
+  </div>
+</section>
 
-    <!-- Left: copy -->
-    <div class="left-col">
-      <h1 class="headline">Fale<br><span>Conosco</span></h1>
-      <p class="subtitle">Estamos prontos para entender sua necessidade e orientar o melhor caminho.</p>
-      <div class="divider"></div>
-    </div>
+<!-- MAIN -->
+<div class="main">
 
-    <!-- Right: Brevo form -->
-    <div class="right-col">
+  <!-- LEFT -->
+  <div class="info-col">
+    <span class="section-label">Como podemos ajudar</span>
+    <h2 class="info-title">Resolvemos a situação do seu imóvel do início ao fim</h2>
+    <p class="info-text">Se sua casa foi construída sem projeto, sem alvará ou está sem documentação no cartório, a Bossolo Engenharia cuida de todo o processo para você regularizar com tranquilidade.</p>
+
+    <ul class="problems">
+      <li><span class="icon">✓</span> Casa construída sem planta ou projeto</li>
+      <li><span class="icon">✓</span> Imóvel sem escritura ou registro no cartório</li>
+      <li><span class="icon">✓</span> Construção sem alvará ou habite-se</li>
+      <li><span class="icon">✓</span> Imóvel irregular que você quer vender</li>
+      <li><span class="icon">✓</span> Averbação de construção na matrícula</li>
+    </ul>
+
+    <a class="whatsapp-btn" href="https://wa.me/5517997221260?text=Ol%C3%A1%2C%20gostaria%20de%20regularizar%20meu%20im%C3%B3vel" target="_blank" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'whatsapp_click'});">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Falar pelo WhatsApp agora
+    </a>
+    <p class="whatsapp-note">Respondemos em minutos durante o horário comercial</p>
+    <div class="or-divider">ou preencha o formulário</div>
+  </div>
+
+  <!-- RIGHT: FORM -->
+  <div class="form-col">
+    <div class="form-card">
+      <h3 class="form-card-title">Solicite uma avaliação</h3>
+      <p class="form-card-subtitle">Preencha seus dados e entraremos em contato para entender sua situação.</p>
+
       <div class="sib-form">
         <div id="sib-form-container" class="sib-form-container">
 
-          <div id="error-message" class="sib-form-message-panel" style="font-size:16px;text-align:left;font-family:Helvetica,sans-serif;color:#661d1d;background-color:#ffeded;border-radius:3px;border-color:#ff4949;max-width:540px;">
+          <div id="error-message" class="sib-form-message-panel" style="font-size:14px;text-align:left;font-family:'Jost',sans-serif;color:#661d1d;background-color:#ffeded;border-radius:8px;border-color:#ff4949;max-width:100%;">
             <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-              <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
-                <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z"/>
-              </svg>
-              <span class="sib-form-message-panel__inner-text">Erro.</span>
+              <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon"><path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z"/></svg>
+              <span class="sib-form-message-panel__inner-text">Erro. Tente novamente.</span>
             </div>
           </div>
 
-          <div id="success-message" class="sib-form-message-panel" style="font-size:16px;text-align:left;font-family:Helvetica,sans-serif;color:#085229;background-color:#e7faf0;border-radius:3px;border-color:#13ce66;max-width:540px;">
+          <div id="success-message" class="sib-form-message-panel" style="font-size:14px;text-align:left;font-family:'Jost',sans-serif;color:#085229;background-color:#e7faf0;border-radius:8px;border-color:#13ce66;max-width:100%;">
             <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-              <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
-                <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z"/>
-              </svg>
-              <span class="sib-form-message-panel__inner-text">Entraremos em contato em breve!</span>
+              <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z"/></svg>
+              <span class="sib-form-message-panel__inner-text">Recebemos! Entraremos em contato em breve.</span>
             </div>
           </div>
 
-          <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center;background-color:rgba(255,255,255,1);max-width:540px;border-radius:3px;border-width:1px;border-color:#C0CCD9;border-style:solid;direction:ltr">
+          <div id="sib-container" class="sib-container--large sib-container--vertical" style="direction:ltr">
             <form id="sib-form" method="POST" action="https://a0dd8cbd.sibforms.com/serve/MUIFAGtrZPVvhJhwqx0y1Ehf-0Kjs-GScSJxoadTo3JPIo0EubBzk7ro47TpRS9SfTCm8P492JZ7EMnkMvO3UW91KVa4wAv1x5DYtBahpTQkeofMGfQv-6aPHFRGVq2kDcLHO93cwAqkVRiBeZYrYFFnoBlMGLNcq3PQu1QGmAh-6VLU97voZpMYIUE_D6KnKzLaA7Ppz-uE-V93vQ==" data-type="subscription">
 
-              <div style="padding:8px 0;">
-                <div class="sib-form-block" style="font-size:16px;text-align:left;font-family:Helvetica,sans-serif;color:#3C4858;background-color:transparent;">
-                  <div class="sib-text-form-block"><p>Preencha com os seus dados!</p></div>
-                </div>
-              </div>
-
-              <!-- NOME -->
-              <div style="padding:8px 0;">
+              <div style="padding:6px 0;">
                 <div class="sib-input sib-form-block">
                   <div class="form__entry entry_block">
                     <div class="form__label-row">
-                      <label class="entry__label" style="font-weight:700;text-align:left;font-size:16px;font-family:Helvetica,sans-serif;color:#3c4858;" for="NOME">Insira seu NOME</label>
+                      <label class="entry__label" style="font-weight:600;font-size:13px;font-family:'Jost',sans-serif;color:#3a3128;" for="NOME">Seu nome</label>
                       <div class="entry__field">
-                        <input class="input" maxlength="200" type="text" id="NOME" name="NOME" autocomplete="off" placeholder="NOME"/>
+                        <input class="input" maxlength="200" type="text" id="NOME" name="NOME" autocomplete="off" placeholder="Como podemos te chamar?"/>
                       </div>
                     </div>
-                    <label class="entry__error entry__error--primary" style="font-size:16px;text-align:left;font-family:Helvetica,sans-serif;color:#661d1d;background-color:#ffeded;border-radius:3px;border-color:#ff4949;"></label>
+                    <label class="entry__error entry__error--primary" style="font-size:13px;font-family:'Jost',sans-serif;color:#661d1d;background-color:#ffeded;border-radius:4px;border-color:#ff4949;"></label>
                   </div>
                 </div>
               </div>
 
-              <!-- WHATSAPP -->
-              <div style="padding:8px 0;">
+              <div style="padding:6px 0;">
                 <div class="sib-sms-field sib-form-block">
                   <div class="form__entry entry_block">
                     <div class="form__label-row">
-                      <label class="entry__label" style="font-weight:700;text-align:left;font-size:16px;font-family:Helvetica,sans-serif;color:#3c4858;" for="SMS" data-required="*">Insira seu WhatsApp</label>
+                      <label class="entry__label" style="font-weight:600;font-size:13px;font-family:'Jost',sans-serif;color:#3a3128;" for="SMS" data-required="*">WhatsApp</label>
                       <div class="sib-sms-input-wrapper" style="direction:ltr">
-                        <div class="sib-sms-input" data-placeholder="WhatsApp" data-required="1" data-country-code="BR" data-whatsapp-country-code="BR" data-value="" data-whatsappvalue="" data-attributename="SMS">
+                        <div class="sib-sms-input" data-placeholder="Seu WhatsApp" data-required="1" data-country-code="BR" data-whatsapp-country-code="BR" data-value="" data-whatsappvalue="" data-attributename="SMS">
                           <div class="entry__field">
                             <select class="input" name="SMS__COUNTRY_CODE" data-required="true">
                               <option value="+55" selected>+55 BR</option>
                               <option value="+1">+1 US</option>
                               <option value="+44">+44 GB</option>
                               <option value="+351">+351 PT</option>
-                              <option value="+54">+54 AR</option>
-                              <option value="+57">+57 CO</option>
-                              <option value="+56">+56 CL</option>
-                              <option value="+52">+52 MX</option>
-                              <option value="+598">+598 UY</option>
-                              <option value="+595">+595 PY</option>
-                              <option value="+51">+51 PE</option>
-                              <option value="+58">+58 VE</option>
                             </select>
                           </div>
                           <div class="entry__field" style="width:100%">
-                            <input type="tel" class="input" id="SMS" name="SMS" autocomplete="off" placeholder="WhatsApp" data-required="true" required/>
+                            <input type="tel" class="input" id="SMS" name="SMS" autocomplete="off" placeholder="(17) 99999-9999" data-required="true" required/>
                           </div>
                         </div>
                         <div class="sib-sms-tooltip">
-                          <div class="sib-sms-tooltip__box">O campo SMS deve conter entre 6 e 19 dígitos e incluir o código do país sem usar +/0</div>
+                          <div class="sib-sms-tooltip__box">Inclua apenas os dígitos sem +/0</div>
                           <span class="sib-sms-tooltip__icon">?</span>
                         </div>
                       </div>
                     </div>
-                    <label class="entry__error entry__error--primary" style="font-size:16px;text-align:left;font-family:Helvetica,sans-serif;color:#661d1d;background-color:#ffeded;border-radius:3px;border-color:#ff4949;"></label>
-                    <label class="entry__error entry__error--secondary" style="font-size:16px;text-align:left;font-family:Helvetica,sans-serif;color:#661d1d;background-color:#ffeded;border-radius:3px;border-color:#ff4949;"></label>
+                    <label class="entry__error entry__error--primary" style="font-size:13px;font-family:'Jost',sans-serif;color:#661d1d;background-color:#ffeded;border-radius:4px;border-color:#ff4949;"></label>
+                    <label class="entry__error entry__error--secondary" style="font-size:13px;font-family:'Jost',sans-serif;color:#661d1d;background-color:#ffeded;border-radius:4px;border-color:#ff4949;"></label>
                   </div>
                 </div>
               </div>
 
-              <!-- EMAIL -->
-              <div style="padding:8px 0;">
+              <div style="padding:6px 0;">
                 <div class="sib-input sib-form-block">
                   <div class="form__entry entry_block">
                     <div class="form__label-row">
-                      <label class="entry__label" style="font-weight:700;text-align:left;font-size:16px;font-family:Helvetica,sans-serif;color:#3c4858;" for="EMAIL" data-required="*">Insira seu e-mail</label>
+                      <label class="entry__label" style="font-weight:600;font-size:13px;font-family:'Jost',sans-serif;color:#3a3128;" for="EMAIL" data-required="*">E-mail</label>
                       <div class="entry__field">
-                        <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required/>
+                        <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="seu@email.com" data-required="true" required/>
                       </div>
                     </div>
-                    <label class="entry__error entry__error--primary" style="font-size:16px;text-align:left;font-family:Helvetica,sans-serif;color:#661d1d;background-color:#ffeded;border-radius:3px;border-color:#ff4949;"></label>
+                    <label class="entry__error entry__error--primary" style="font-size:13px;font-family:'Jost',sans-serif;color:#661d1d;background-color:#ffeded;border-radius:4px;border-color:#ff4949;"></label>
                   </div>
                 </div>
               </div>
 
-              <!-- BOTÃO -->
-              <div style="padding:8px 0;">
-                <div class="sib-form-block" style="text-align:left">
-                  <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px;text-align:left;font-weight:700;font-family:Helvetica,sans-serif;color:#FFFFFF;background-color:#76795b;border-radius:3px;border-width:0px;" type="submit">
-                    <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
-                      <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/>
-                    </svg>
-                    FALE CONOSCO
+              <div style="padding:10px 0 4px;">
+                <div class="sib-form-block">
+                  <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:14px;font-weight:600;font-family:'Jost',sans-serif;color:#FFFFFF;background-color:#c87941;border-radius:8px;border-width:0px;letter-spacing:0.08em;text-transform:uppercase;" type="submit">
+                    <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512"><path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/></svg>
+                    Quero regularizar meu imóvel
                   </button>
                 </div>
               </div>
@@ -283,76 +403,56 @@
         </div>
       </div>
     </div>
+  </div>
 
-  </div><!-- end page-wrapper -->
+</div>
 
-  <!-- Brevo JS -->
-  <script>
-    window.REQUIRED_CODE_ERROR_MESSAGE = 'Escolha um código de país';
-    window.LOCALE = 'pt';
-    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "A informação fornecida não é válida. Verifique o formato do campo e tente novamente.";
-    window.REQUIRED_ERROR_MESSAGE = "Este campo não pode ser deixado em branco. ";
-    window.GENERIC_INVALID_MESSAGE = "A informação fornecida não é válida. Verifique o formato do campo e tente novamente.";
-    window.translation = {
-      common: {
-        selectedList: '{quantity} lista selecionada',
-        selectedLists: '{quantity} listas selecionadas',
-        selectedOption: '{quantity} selecionado',
-        selectedOptions: '{quantity} selecionados',
-      }
-    };
-    var AUTOHIDE = Boolean(0);
-  </script>
-  <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<footer class="footer">
+  Bossolo Engenharia · São José do Rio Preto e região
+</footer>
 
-  <script>
-    (function() {
-      window.dataLayer = window.dataLayer || [];
-      var fired = false;
-
-      window.addEventListener('load', function() {
-        var sibContainer = document.getElementById('sib-form-container');
-        if (!sibContainer) return;
-
-        var observer = new MutationObserver(function() {
-          if (fired) return;
-          var successMsg = document.getElementById('success-message');
-          if (!successMsg) return;
-          var isVisible = successMsg.offsetHeight > 0 &&
-                          window.getComputedStyle(successMsg).display !== 'none' &&
-                          window.getComputedStyle(successMsg).visibility !== 'hidden';
-          if (isVisible) {
-            fired = true;
-            observer.disconnect();
-            window.dataLayer.push({
-              event: 'brevo_form_submit',
-              form_name: 'fale_conosco'
-            });
-          }
-        });
-
-        observer.observe(sibContainer, {
-          childList: true,
-          subtree: true,
-          attributes: true,
-          attributeFilter: ['style', 'class']
-        });
-      });
-    })();
-  </script>
-
-  <!-- Script que envia altura real da página para o iframe pai (Google Sites) -->
-  <script>
-    function sendHeight() {
-      var h = document.body.scrollHeight;
-      window.parent.postMessage({ frameHeight: h }, '*');
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Escolha um código de país';
+  window.LOCALE = 'pt';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Informação inválida. Verifique e tente novamente.";
+  window.REQUIRED_ERROR_MESSAGE = "Este campo é obrigatório.";
+  window.GENERIC_INVALID_MESSAGE = "Informação inválida. Verifique e tente novamente.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} lista selecionada',
+      selectedLists: '{quantity} listas selecionadas',
+      selectedOption: '{quantity} selecionado',
+      selectedOptions: '{quantity} selecionados',
     }
-    window.addEventListener('load', sendHeight);
-    window.addEventListener('resize', sendHeight);
-    // Observa mudanças no DOM (ex: mensagem de sucesso aparecendo)
-    var resizeObserver = new ResizeObserver(sendHeight);
-    resizeObserver.observe(document.body);
-  </script>
+  };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+<script>
+  (function() {
+    window.dataLayer = window.dataLayer || [];
+    var fired = false;
+    window.addEventListener('load', function() {
+      var sibContainer = document.getElementById('sib-form-container');
+      if (!sibContainer) return;
+      var observer = new MutationObserver(function() {
+        if (fired) return;
+        var successMsg = document.getElementById('success-message');
+        if (!successMsg) return;
+        var isVisible = successMsg.offsetHeight > 0 &&
+                        window.getComputedStyle(successMsg).display !== 'none' &&
+                        window.getComputedStyle(successMsg).visibility !== 'hidden';
+        if (isVisible) {
+          fired = true;
+          observer.disconnect();
+          window.dataLayer.push({ event: 'brevo_form_submit', form_name: 'fale_conosco' });
+        }
+      });
+      observer.observe(sibContainer, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+    });
+  })();
+</script>
 
 </body>
 </html>
